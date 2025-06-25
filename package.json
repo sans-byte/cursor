@@ -1,0 +1,19 @@
+{
+  "name": "cursor",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "openai": "^5.7.0",
+    "together-ai": "^0.16.0"
+  }
+}
