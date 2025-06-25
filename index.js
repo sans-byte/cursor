@@ -16,8 +16,7 @@ const askPrompt = (question) => {
 };
 
 const client = new OpenAI({
-  apiKey:
-    "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",
+  apiKey: process.env.OPENROUTER_API_KEY,
   baseURL: "https://openrouter.ai/api/v1", // required for OpenRouter
   defaultHeaders: {
     "HTTP-Referer": "http://localhost", // optional but recommended
