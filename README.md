@@ -1,4 +1,4 @@
-# cursor
+# Cursor
 
 To install dependencies:
 
