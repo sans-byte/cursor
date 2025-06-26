@@ -94,7 +94,7 @@ What is the weather in Delhi?
 
 List all files in the current directory.
 
-Create a fully functional TODO list web app with the help of HTML, CSS, JS
+Create a fully functional TODO list web app with the help of HTML, CSS, JS inside todo folder
 
 ```
 
