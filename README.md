@@ -2,7 +2,7 @@
 
 Cursor is a Bun-powered CLI assistant that uses [Together](https://api.together.xyz) to connect with advanced LLMs (like DeepSeek) for intelligent reasoning and command execution right from your terminal.
 
-> 🔧 Built with [Bun](https://bun.sh) • 🧠 Powered by [DeepSeek R1](https://huggingface.co/deepseek-ai/DeepSeek-V3) via Together
+> 🔧 Built with [Bun](https://bun.sh) • 🧠 Powered by [DeepSeek](https://huggingface.co/deepseek-ai/DeepSeek-V3) via Together
 
 ---
 
