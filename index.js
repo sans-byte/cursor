@@ -1,6 +1,9 @@
 import OpenAI from "openai";
 import { exec } from "node:child_process";
 import readline from "node:readline";
+import Together from "together-ai";
+
+const client = new Together();
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -15,17 +18,19 @@ const askPrompt = (question) => {
   });
 };
 
-const client = new OpenAI({
-  apiKey: process.env.OPENROUTER_API_KEY,
-  baseURL: "https://openrouter.ai/api/v1", // required for OpenRouter
-  defaultHeaders: {
-    "HTTP-Referer": "http://localhost", // optional but recommended
-    "X-Title": "Test Project", // optional
-  },
-});
+// const client = new OpenAI({
+//   apiKey: process.env.OPENROUTER_API_KEY,
+//   baseURL: "https://openrouter.ai/api/v1",
+//   defaultHeaders: {
+//     "HTTP-Referer": "http://localhost",
+//     "X-Title": "Test Project",
+//   },
+// });
 
-function getWeatherInfo(city) {
-  return "32'Celcius";
+async function getWeatherInfo(city) {
+  const response = await fetch(`https://wttr.in/${city}?format=%t`);
+  const temperature = await response.text();
+  return temperature;
 }
 
 function executeCommand(command) {
@@ -34,7 +39,6 @@ function executeCommand(command) {
       if (error) {
         return reject(error);
       }
-
       resolve(`stdout : ${stdout} \n stderr : ${stderr}`);
     });
   });
@@ -97,7 +101,7 @@ async function init() {
 
   while (true) {
     const response = await client.chat.completions.create({
-      model: "deepseek/deepseek-r1-0528:free",
+      model: "deepseek-ai/DeepSeek-V3",
       response_format: { type: "json_object" },
       messages: message,
     });
