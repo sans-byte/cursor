@@ -1,8 +1,8 @@
 # 🧠 Cursor - AI Shell Assistant
 
-Cursor is a Bun-powered CLI assistant that uses [OpenRouter](https://openrouter.ai) to connect with advanced LLMs (like DeepSeek) for intelligent reasoning and command execution right from your terminal.
+Cursor is a Bun-powered CLI assistant that uses [Together](https://api.together.xyz) to connect with advanced LLMs (like DeepSeek) for intelligent reasoning and command execution right from your terminal.
 
-> 🔧 Built with [Bun](https://bun.sh) • 🧠 Powered by [DeepSeek R1](https://huggingface.co/deepseek-ai/DeepSeek-R1-0528) via OpenRouter
+> 🔧 Built with [Bun](https://bun.sh) • 🧠 Powered by [DeepSeek R1](https://huggingface.co/deepseek-ai/DeepSeek-V3) via Together
 
 ---
 
@@ -11,7 +11,7 @@ Cursor is a Bun-powered CLI assistant that uses [OpenRouter](https://openrouter.
 - Structured AI reasoning via `START → THINK → ACTION → OBSERVE → OUTPUT`
 - Executes shell commands using natural language
 - Super-fast development with [Bun](https://bun.sh) and [TypeScript](https://www.typescriptlang.org/)
-- Uses OpenRouter to access models like DeepSeek
+- Uses Together to access models like DeepSeek
 
 ---
 
@@ -53,13 +53,13 @@ Copy the example file:
 cp .env.example .env
 ```
 
-Then edit the `.env` file and add your [OpenRouter](https://openrouter.ai) API key:
+Then edit the `.env` file and add your [Together](https://api.together.xyz) API key:
 
 ```env
-OPENROUTER_API_KEY=your_openrouter_api_key_here
+TOGETHER_API_KEY=your_together_api_key_here
 ```
 
-You can get your key for free at: https://openrouter.ai
+You can get your key for free at: https://api.together.xyz
 
 ---
 
